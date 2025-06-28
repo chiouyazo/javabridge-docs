@@ -1,6 +1,9 @@
-# Fabric Documentation
+# JavaBridge Documentation
 
-This repository contains the source code for the Fabric Documentation website, which is built using [VitePress](https://vitepress.dev/).
+This repository contains the source code for the JavaBridge Documentation website, which is built using [VitePress](https://vitepress.dev/).
+
+
+It is a fork of the Fabric documentation and was changed so that the guides represent the JavaBridge ModHost API.
 
 ## Contributing
 

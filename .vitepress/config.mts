@@ -53,7 +53,7 @@ export default defineVersionedConfig(
     },
 
     sitemap: {
-      hostname: "https://docs.fabricmc.net/",
+      hostname: "http://chiouyazo.github.io/javabridge-docs/",
       transformItems,
     },
 

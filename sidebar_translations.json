@@ -14,7 +14,7 @@
   "players.updatingFabric": "Updating Fabric",
   "develop.title": "Developer Guides",
   "develop.gettingStarted": "Getting Started",
-  "develop.gettingStarted.introduction": "Introduction to Fabric and Modding",
+  "develop.gettingStarted.introduction": "Introduction to Fabric, JavaBridge and Modding",
   "develop.gettingStarted.devEnvSetup": "Setting up a Development Environment",
   "develop.gettingStarted.creatingProject": "Creating a Project",
   "develop.gettingStarted.projectStructure": "Project Structure",
