@@ -1,11 +1,11 @@
 ---
-title: Fabric Documentation
-description: The official curated documentation for Fabric, a modding toolchain for Minecraft.
+title: JavaBridge Documentation
+description: The documentation for the JavaBridge, a modding platform for Minecraft. A mirror of the fabric documentation, showcasing JavaBridge Modhosts.
 layout: home
 
 hero:
   name: Fabric Documentation
-  tagline: The official curated documentation for Fabric, a modding toolchain for Minecraft.
+  tagline: The documentation for the JavaBridge, a modding platform for Minecraft.
 
 features:
   - title: Player Guides

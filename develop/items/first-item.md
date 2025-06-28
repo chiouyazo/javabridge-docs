@@ -6,12 +6,13 @@ authors:
   - Earthcomputer
   - IMB11
   - RaphProductions
+  - chiouyazo
 ---
 
 This page will introduce you into some key concepts relating to items, and how you can register, texture, model and name them.
 
 If you aren't aware, everything in Minecraft is stored in registries, and items are no exception to that.
-
+<!-- 
 ## Preparing Your Items Class {#preparing-your-items-class}
 
 To simplify the registering of items, you can create a method that accepts a string identifier, some item settings and a factory to create the `Item` instance.
@@ -24,13 +25,34 @@ Mojang does this with their items as well! Check out the `Items` class for inspi
 
 @[code transcludeWith=:::1](@/reference/latest/src/main/java/com/example/docs/item/ModItems.java)
 
-Notice the usage of a [`Function`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html) interface for the factory, which will later allow us to specify how we want our item to be created from the item settings using `Item::new`.
+Notice the usage of a [`Function`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html) interface for the factory, which will later allow us to specify how we want our item to be created from the item settings using `Item::new`. -->
 
 ## Registering an Item {#registering-an-item}
 
-You can now register an item using the method now.
+To register an item, you will need to get the item handler from the bridge.
 
-The register method takes in an instance of the `Item.Settings` class as a parameter. This class allows you to configure the item's properties through various builder methods.
+@[code transcludeWith=:::1](@/reference/latest/Csharp/example/ModItems.cs)
+
+With which you can call the RegisterItem method, which takes in the item definition and item group.
+
+@[code transcludeWith=:::2](@/reference/latest/Csharp/example/ModItems.cs)
+
+The item definition is the key with which translations, and item models can be defined later.
+It should be all lowercase.
+
+The item group can be set to null, which makes the item not be registered to any group.
+
+
+## Features to be added {#features-to-be-added}
+
+* Item settings (e.g. item stack)
+* Baked items
+* Compostable/fuel ability
+* Custom tooltips
+
+<!-- You can now register an item using the method now. -->
+
+<!-- The register method takes in an instance of the `Item.Settings` class as a parameter. This class allows you to configure the item's properties through various builder methods.
 
 ::: tip
 If you want to change your item's stack size, you can use the `maxCount` method in the `Item.Settings` class.
@@ -50,8 +72,8 @@ To do this, you can add a public static initialize method to your class and call
 
 @[code transcludeWith=:::1](@/reference/latest/src/main/java/com/example/docs/item/FabricDocsReferenceItems.java)
 
-Calling a method on a class statically initializes it if it hasn't been previously loaded - this means that all `static` fields are evaluated. This is what this dummy `initialize` method is for.
-
+Calling a method on a class statically initializes it if it hasn't been previously loaded - this means that all `static` fields are evaluated. This is what this dummy `initialize` method is for. -->
+<!-- 
 ## Adding the Item to an Item Group {#adding-the-item-to-an-item-group}
 
 ::: info
@@ -72,7 +94,7 @@ However, it's missing the following:
 
 - Item Model
 - Texture
-- Translation (name)
+- Translation (name) -->
 
 ## Naming The Item {#naming-the-item}
 
@@ -131,7 +153,7 @@ Your item should now look like this in-game:
 
 ![Item with correct model](/assets/develop/items/first_item_2.png)
 
-## Making the Item Compostable or a Fuel {#making-the-item-compostable-or-a-fuel}
+<!-- ## Making the Item Compostable or a Fuel {#making-the-item-compostable-or-a-fuel}
 
 Fabric API provides various registries that can be used to add additional properties to your item.
 
@@ -141,7 +163,7 @@ For example, if you want to make your item compostable, you can use the `Compost
 
 Alternatively, if you want to make your item a fuel, you can use the `FuelRegistryEvents.BUILD` event:
 
-@[code transcludeWith=:::_11](@/reference/latest/src/main/java/com/example/docs/item/ModItems.java)
+@[code transcludeWith=:::_11](@/reference/latest/src/main/java/com/example/docs/item/ModItems.java) -->
 
 ## Adding a Basic Crafting Recipe {#adding-a-basic-crafting-recipe}
 
@@ -154,7 +176,7 @@ For more information on the recipe format, check out these resources:
 - [Recipe JSON Generator](https://crafting.thedestruc7i0n.ca/)
 - [Minecraft Wiki - Recipe JSON](https://minecraft.wiki/w/Recipe#JSON_Format)
 
-## Custom Tooltips {#custom-tooltips}
+<!-- ## Custom Tooltips {#custom-tooltips}
 
 If you want your item to have a custom tooltip, you will need to create a class that extends `Item` and override the `appendTooltip` method.
 
@@ -166,4 +188,4 @@ This example uses the `LightningStick` class created in the [Custom Item Interac
 
 Each call to `add()` will add one line to the tooltip.
 
-![Tooltip Showcase](/assets/develop/items/first_item_3.png)
+![Tooltip Showcase](/assets/develop/items/first_item_3.png) -->
