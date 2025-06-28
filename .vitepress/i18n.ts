@@ -241,10 +241,10 @@ function generateTranslatedThemeConfig(localeCode: string): Fabric.ThemeConfig {
     logo: "/logo.png",
 
     nav: [
-      { text: websiteResolver("nav.home"), link: "http://chiouyazo.github.io/javabridge-docs/" },
+      { text: websiteResolver("nav.home"), link: "https://javabridge.chiouya.cloud" },
       {
         text: websiteResolver("nav.download"),
-        link: "http://chiouyazo.github.io/javabridge-docs/use",
+        link: "https://javabridge.chiouya.cloud/use",
       },
       {
         text: websiteResolver("nav.contribute"),

@@ -24,7 +24,7 @@ export function transformPageData(pageData: PageData, _context: any) {
     ["og:type", "website"],
     ["og:title", title],
     ["og:description", pageData.description],
-    ["og:url", `http://chiouyazo.github.io/javabridge-docs/${pageData.relativePath}`],
+    ["og:url", `https://javabridge.chiouya.cloud/${pageData.relativePath}`],
     ["og:image", "/logo.png"],
     ["og:locale", parts[0]],
     // TODO: "og:locale:alternate"?
@@ -57,7 +57,7 @@ export function transformItems(items: any[]): any[] {
 
   const itemsCopy = [...items];
   for (const item of items) {
-    const path = item.url.replace("http://chiouyazo.github.io/javabridge-docs/", "") + ".md";
+    const path = item.url.replace("https://javabridge.chiouya.cloud/", "") + ".md";
 
     // Remove the item if it's a versioned item
     if (inverseRewrites[path]?.includes("versions")) {

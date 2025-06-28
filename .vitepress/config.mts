@@ -8,8 +8,7 @@ import { transformItems, transformPageData } from "./transform";
 // https://www.npmjs.com/package/vitepress-versioning-plugin
 export default defineVersionedConfig(
   {
-    base: '/javabridge-docs/',
-    
+   
     // Removes .html from the end of URLs.
     cleanUrls: true,
 
@@ -55,7 +54,7 @@ export default defineVersionedConfig(
     },
 
     sitemap: {
-      hostname: "http://chiouyazo.github.io/javabridge-docs/",
+      hostname: "https://javabridge.chiouya.cloud",
       transformItems,
     },
 
