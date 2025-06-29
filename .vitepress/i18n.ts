@@ -214,7 +214,7 @@ function generateTranslatedThemeConfig(localeCode: string): Fabric.ThemeConfig {
     },
 
     editLink: {
-      pattern: "https://github.com/FabricMC/fabric-docs/edit/main/:path",
+      pattern: "https://github.com/chiouyazo/javabridge-docs/edit/main/:path",
       text: websiteResolver("github_edit"),
     },
 
@@ -223,7 +223,7 @@ function generateTranslatedThemeConfig(localeCode: string): Fabric.ThemeConfig {
     footer: {
       copyright: websiteResolver("footer.copyright").replace(
         "%s",
-        `<a href=\"https://github.com/FabricMC/fabric-docs/blob/main/LICENSE\" target=\"_blank\" rel=\"noreferrer\">${websiteResolver(
+        `<a href=\"https://github.com/chiouyazo/javabridge-docs/blob/main/LICENSE\" target=\"_blank\" rel=\"noreferrer\">${websiteResolver(
           "footer.license"
         )}</a>`
       ),

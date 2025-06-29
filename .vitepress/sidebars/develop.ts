@@ -13,6 +13,24 @@ export default [
         link: "https://github.com/FabricMC/fabric",
       },
       {
+        text: "JavaBridge Github",
+        processSidebarURLs: false,
+        translatable: false,
+        link: "https://github.com/chiouyazo/javabridge",
+      },
+      {
+        text: "C# ModHost Github",
+        processSidebarURLs: false,
+        translatable: false,
+        link: "https://github.com/chiouyazo/ModHost.CSharp",
+      },
+      {
+        text: "C++ ModHost Github",
+        processSidebarURLs: false,
+        translatable: false,
+        link: "https://github.com/chiouyazo/ModHost.Cpp",
+      },
+      {
         text: "Yarn GitHub",
         processSidebarURLs: false,
         translatable: false,

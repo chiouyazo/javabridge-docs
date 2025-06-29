@@ -15,7 +15,7 @@ export namespace Fabric {
 
   export interface BannerOptions {
     /**
-     * @default "Fabric Documentation is a work in progress. Report issues on %s or on %s."
+     * @default "JavaBridge Documentation is a work in progress. Report issues on %s or on %s."
      */
     text: string;
 

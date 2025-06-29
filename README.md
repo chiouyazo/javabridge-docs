@@ -2,8 +2,9 @@
 
 This repository contains the source code for the JavaBridge Documentation website, which is built using [VitePress](https://vitepress.dev/).
 
-
 It is a fork of the Fabric documentation and was changed so that the guides represent the JavaBridge ModHost API.
+
+For a available feature overview please refer to the [JavaBridge repo](https://github.com/chiouyazo/javabridge)
 
 ## Contributing
 

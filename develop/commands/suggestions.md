@@ -3,6 +3,7 @@ title: Command Suggestions
 description: Learn how to suggest command argument values to users.
 authors:
   - IMB11
+  - chiouyazo
 ---
 
 Minecraft has a powerful command suggestion system that's used in many places, such as the `/give` command. This system allows you to suggest values for command arguments to the user, which they can then select from - it's a great way to make your commands more user-friendly and ergonomic.
@@ -13,10 +14,12 @@ A `SuggestionProvider` is used to make a list of suggestions that will be sent t
 
 ## Using Suggestion Providers {#using-suggestion-providers}
 
-To use a suggestion provider, you need to call the `suggests` method on the argument builder. This method takes a `SuggestionProvider` and returns the modified argument builder with the suggestion provider attached.
+To use a suggestion provider, you can add the type string at the end of the method when adding a argument.
+(This will later be converted into a enum)
 
-@[code java highlight={4} transcludeWith=:::command_with_suggestions](@/reference/latest/src/main/java/com/example/docs/command/FabricDocsReferenceCommands.java)
-@[code java transcludeWith=:::execute_command_with_suggestions](@/reference/latest/src/main/java/com/example/docs/command/FabricDocsReferenceCommands.java)
+@[code transcludeWith=:::16](@/reference/latest/Csharp/example/ModCommands.cs)
+
+@[code transcludeWith=:::17](@/reference/latest/Csharp/example/ModCommands.cs)
 
 ## Built-in Suggestion Providers {#built-in-suggestion-providers}
 
@@ -31,16 +34,16 @@ There are a few built-in suggestion providers that you can use:
 
 ## Creating a Custom Suggestion Provider {#creating-a-custom-suggestion-provider}
 
-If a built-in provider doesn't satisfy your needs, you can create your own suggestion provider. To do this, you need to create a class that implements the `SuggestionProvider` interface and override the `getSuggestions` method.
+If a built-in provider doesn't satisfy your needs, you can create your own suggestion provider.
+To do this, you can register a SuggestionProvider using the `RegisterSuggestionProvider()` method in the command handler.
 
-For this example, we'll make a suggestion provider that suggests all the player usernames on the server.
+@[code transcludeWith=:::18](@/reference/latest/Csharp/example/ModCommands.cs)
 
-@[code java transcludeWith=:::1](@/reference/latest/src/main/java/com/example/docs/command/PlayerSuggestionProvider.java)
+To use this suggestion provider, you would simply pass the identifier with the prefix "CUSTOM:" into the registration of an argument.
 
-To use this suggestion provider, you would simply pass an instance of it into the `.suggests` method on the argument builder.
+@[code transcludeWith=:::19](@/reference/latest/Csharp/example/ModCommands.cs)
 
-@[code java highlight={4} transcludeWith=:::command_with_custom_suggestions](@/reference/latest/src/main/java/com/example/docs/command/FabricDocsReferenceCommands.java)
-@[code java transcludeWith=:::execute_command_with_custom_suggestions](@/reference/latest/src/main/java/com/example/docs/command/FabricDocsReferenceCommands.java)
+@[code transcludeWith=:::20](@/reference/latest/Csharp/example/ModCommands.cs)
 
 Obviously, suggestion providers can be more complex, since they can also read the command context to provide suggestions based on the command's state - such as the arguments that have already been provided.
 
