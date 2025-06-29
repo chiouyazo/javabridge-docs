@@ -1,0 +1,1 @@
+await commandHandler.RegisterCommandAsync(testCommand);

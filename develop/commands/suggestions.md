@@ -17,9 +17,15 @@ A `SuggestionProvider` is used to make a list of suggestions that will be sent t
 To use a suggestion provider, you can add the type string at the end of the method when adding a argument.
 (This will later be converted into a enum)
 
-@[code transcludeWith=:::16](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/BuildCommandWithSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/BuildCommandWithSuggestions.cs{c++} [C++]
+:::
 
-@[code transcludeWith=:::17](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/ExecuteCommandWithSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/ExecuteCommandWithSuggestions.cs{c++} [C++]
+:::
 
 ## Built-in Suggestion Providers {#built-in-suggestion-providers}
 
@@ -37,13 +43,23 @@ There are a few built-in suggestion providers that you can use:
 If a built-in provider doesn't satisfy your needs, you can create your own suggestion provider.
 To do this, you can register a SuggestionProvider using the `RegisterSuggestionProvider()` method in the command handler.
 
-@[code transcludeWith=:::18](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/RegisterSuggestionProvider.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/RegisterSuggestionProvider.cs{c++} [C++]
+:::
 
 To use this suggestion provider, you would simply pass the identifier with the prefix "CUSTOM:" into the registration of an argument.
 
-@[code transcludeWith=:::19](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/BuildCommandWithCustomSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/BuildCommandWithCustomSuggestions.cs{c++} [C++]
+:::
 
-@[code transcludeWith=:::20](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/ExecuteCommandWithCustomSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/ExecuteCommandWithCustomSuggestions.cs{c++} [C++]
+:::
+
 
 Obviously, suggestion providers can be more complex, since they can also read the command context to provide suggestions based on the command's state - such as the arguments that have already been provided.
 

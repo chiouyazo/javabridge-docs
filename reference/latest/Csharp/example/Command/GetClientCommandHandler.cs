@@ -1,0 +1,1 @@
+CommandHandler clientCommandHandler = bridge.GetClientCommandHandler();
