@@ -18,13 +18,13 @@ To use a suggestion provider, you can add the type string at the end of the meth
 (This will later be converted into a enum)
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildCommandWithSuggestions.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildCommandWithSuggestions.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Suggestions/BuildCommandWithSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Suggestions/BuildCommandWithSuggestions.cs{c++} [C++]
 :::
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/ExecuteCommandWithSuggestions.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/ExecuteCommandWithSuggestions.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Suggestions/ExecuteCommandWithSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Suggestions/ExecuteCommandWithSuggestions.cs{c++} [C++]
 :::
 
 ## Built-in Suggestion Providers {#built-in-suggestion-providers}
@@ -44,20 +44,20 @@ If a built-in provider doesn't satisfy your needs, you can create your own sugge
 To do this, you can register a SuggestionProvider using the `RegisterSuggestionProvider()` method in the command handler.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/RegisterSuggestionProvider.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/RegisterSuggestionProvider.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Suggestions/RegisterSuggestionProvider.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Suggestions/RegisterSuggestionProvider.cs{c++} [C++]
 :::
 
 To use this suggestion provider, you would simply pass the identifier with the prefix "CUSTOM:" into the registration of an argument.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildCommandWithCustomSuggestions.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildCommandWithCustomSuggestions.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Suggestions/BuildCommandWithCustomSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Suggestions/BuildCommandWithCustomSuggestions.cs{c++} [C++]
 :::
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/ExecuteCommandWithCustomSuggestions.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/ExecuteCommandWithCustomSuggestions.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Suggestions/ExecuteCommandWithCustomSuggestions.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Suggestions/ExecuteCommandWithCustomSuggestions.cs{c++} [C++]
 :::
 
 

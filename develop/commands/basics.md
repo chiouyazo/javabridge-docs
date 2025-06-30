@@ -75,8 +75,8 @@ Command<ServerCommandSource> command = context -> {
 Commands are registered within the `CommandHandler` provided by the Bridge.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/GetCommandHandler.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/GetCommandHandler.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/GetCommandHandler.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/GetCommandHandler.cs{c++} [C++]
 :::
 
 Commands should be registered on your mods startup. New commands cannot be registered during runtime and the command result will then return false.
@@ -84,8 +84,8 @@ Commands should be registered on your mods startup. New commands cannot be regis
 Commands can be build fluently using the `CreateCommand()` method.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildTestCommand.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildTestCommand.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/BuildTestCommand.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/BuildTestCommand.cs{c++} [C++]
 :::
 
 The context is of type `CommandContext` and it provides access to the CommandSource, which in turn gives access to (nearly) all context that java would have too.
@@ -93,8 +93,8 @@ The context is of type `CommandContext` and it provides access to the CommandSou
 For example the player name that executed the command can be gotten by running:
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/GetContextName.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/GetContextName.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/GetContextName.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/GetContextName.cs{c++} [C++]
 :::
 
 The CommandContext might vary depending on if the command is a client or server command. (e.g. the `NotInAnyWorld()` method is only available in server commands)
@@ -104,8 +104,8 @@ The CommandContext might vary depending on if the command is a client or server 
 After a command was build, it has to be registered using the `RegisterCommandAsync` method.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/RegisterTestCommand.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/RegisterTestCommand.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/RegisterTestCommand.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/RegisterTestCommand.cs{c++} [C++]
 :::
 
 To execute this command, you must type `/test_command`, which is case-sensitive.
@@ -131,13 +131,13 @@ comes into play. The `Requires()` method has one argument of a `Func<S>` which w
 to test with and determine if the `CommandSource` can execute the command.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildRequiredCommand.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildRequiredCommand.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/BuildRequiredCommand.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/BuildRequiredCommand.cs{c++} [C++]
 :::
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/ExecuteRequiredCommand.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/ExecuteRequiredCommand.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/ExecuteRequiredCommand.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/ExecuteRequiredCommand.cs{c++} [C++]
 :::
 
 This command will only execute if the source of the command is a level 2 operator at a minimum, including command
@@ -151,26 +151,26 @@ also why you cannot tab-complete most commands when you do not enable cheats.
 To add a sub command, you register the first literal node of the command normally. To have a sub command, you have to append the next literal node to the existing node.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildSubCommands.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildSubCommands.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/BuildSubCommands.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/BuildSubCommands.cs{c++} [C++]
 :::
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/ExecuteSubCommandOne.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/ExecuteSubCommandOne.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/ExecuteSubCommandOne.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/ExecuteSubCommandOne.cs{c++} [C++]
 :::
 
 Similar to arguments, sub command nodes can also be set optional. In the following case, both `/command_two`
 and `/command_two sub_command_two` will be valid.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/BuildOptionalSubCommand.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/BuildOptionalSubCommand.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/BuildOptionalSubCommand.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/BuildOptionalSubCommand.cs{c++} [C++]
 :::
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/ExecuteSubCommands.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/ExecuteSubCommands.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/ExecuteSubCommands.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/ExecuteSubCommands.cs{c++} [C++]
 :::
 
 ## Client Commands {#client-commands}
@@ -178,8 +178,8 @@ and `/command_two sub_command_two` will be valid.
 Client commands can be registered almost identically, but instead you have to get the client `CommandHandler`.
 
 ::: code-group
-<<< @/reference/latest/Csharp/example/Command/GetClientCommandHandler.cs{c#} [C#]
-<<< @/reference/latest/Cpp/example/Command/GetClientCommandHandler.cs{c++} [C++]
+<<< @/reference/latest/Csharp/example/Command/Basics/GetClientCommandHandler.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Basics/GetClientCommandHandler.cs{c++} [C++]
 :::
 
 ## Command Redirects {#command-redirects}

@@ -11,9 +11,15 @@ argument,
 the command will also run. One node may have multiple argument types, but be aware that there is a possibility of
 ambiguity, which should be avoided.
 
-@[code transcludeWith=:::12](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/Arguments/BuildCommandWithArg.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Arguments/BuildCommandWithArg.cs{c++} [C++]
+:::
 
-@[code transcludeWith=:::13](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/Arguments/ExecuteCommandWithArg.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Arguments/ExecuteCommandWithArg.cs{c++} [C++]
+:::
 
 Available type strings (This will be converted into enums down the road):
 
@@ -35,9 +41,15 @@ If you type `/command_with_arg` without arguments, the command cannot be correct
 
 Then we add an optional second argument:
 
-@[code transcludeWith=:::14](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/Arguments/BuildCommandWithTwoArgs.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Arguments/BuildCommandWithTwoArgs.cs{c++} [C++]
+:::
 
-@[code transcludeWith=:::15](@/reference/latest/Csharp/example/ModCommands.cs)
+::: code-group
+<<< @/reference/latest/Csharp/example/Command/Arguments/ExecuteCommandWithMultipleArgs.cs{c#} [C#]
+<<< @/reference/latest/Cpp/example/Command/Arguments/ExecuteCommandWithMultipleArgs.cs{c++} [C++]
+:::
 
 Now you can type one or two integers. If you give one integer, a feedback text with a single value is printed. If you
 provide two integers, a feedback text with two values will be printed.
