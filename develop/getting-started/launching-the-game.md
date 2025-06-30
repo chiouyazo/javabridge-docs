@@ -4,8 +4,28 @@ description: Learn how to utilize the various launch profiles to start and debug
 authors:
   - IMB11
   - Tenneb22
+  - chiouyazo
 ---
 
+This part will change entirely once we have a proper project template for C#.
+
+For now use either of these methods:
+
+## Build JavaBridge from source {#build-javabridge-from-source}
+
+Pull the JavaBridge repository, and then start the minecraft client.
+The `.bridgeStartup` should be in the mods directory of the game, so the JavaBridge recognizes it and can import resources.
+
+While the JavaBridge is starting, start up your Mod project.
+The `ModHostBridge` will wait for the JavaBridge to be available.
+
+## Installing the JavaBridge mod {#installing-the-javabridge-mod}
+
+This is pretty much exactly the same as the above method, but instead of building the JavaBridge mod, you just install it like a regular mod, and then start your fabric client.
+
+While it is starting up, you can start your Mod project at the same time.
+
+<!-- 
 Fabric Loom provides a variety of launch profiles to help you start and debug your mods in a live game environment. This guide will cover the various launch profiles and how to use them to debug and playtest your mods.
 
 ## Launch Profiles {#launch-profiles}
@@ -67,4 +87,4 @@ In your "Minecraft Client" and or "Minecraft Server" run configuration, add the 
 
 ![VM Arguments Screenshot](/assets/develop/getting-started/vm-arguments.png)
 
-Now, you should be able to modify the contents of your mixin methods during debugging and have the changes take effect without restarting the game.
+Now, you should be able to modify the contents of your mixin methods during debugging and have the changes take effect without restarting the game. -->

@@ -4,6 +4,7 @@ description: "A brief introduction to Fabric and modding in Minecraft: Java Edit
 authors:
   - IMB11
   - itsmiir
+  - chiouyazo
 authors-nogithub:
   - basil4088
 ---
@@ -43,6 +44,16 @@ You should be aware of the four main components of Fabric:
 - **Fabric Loom**: A Gradle plugin enabling developers to easily develop and debug mods.
 - **Fabric API**: A set of APIs and tools for mod developers to use when creating mods.
 - **Yarn**: A set of open Minecraft mappings, free for everyone to use under the Creative Commons Zero license.
+
+## What Is the JavaBridge? {#what-is-the-javabridge}
+
+The JavaBridge is a mod written in java for the Fabric API, that enables a TCP connection to the Minecraft client.
+
+It enables other programming languages to interact with Minecraft and thus write full on mods for it.
+
+The JavaBridge ships as a standalone mod that is required for all mods that use it.
+
+It automatically starts up mods written using a ModHost on startup.
 
 ## Why Is Fabric Necessary to Mod Minecraft? {#why-is-fabric-necessary-to-mod-minecraft}
 
